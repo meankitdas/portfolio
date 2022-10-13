@@ -158,9 +158,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-              <div className="py-10 my-10">
-                <Lottie options={defaultOptions} />
-              </div>
+            <div className="py-10 my-10">
+              <Lottie options={defaultOptions} />
+            </div>
           </div>
         </section>
       </main>
