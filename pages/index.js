@@ -8,21 +8,17 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import profile from "../public/profile.png";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+// import { useState, useEffect } from "react";
+// import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 
 import animationData from "../public/about.json";
 
 // import {Parallax} from "react-scroll-parallax"
 
 export default function Home() {
-  useEffect(() => {
-    // typeWriter();
-  }, []);
-
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -97,28 +93,28 @@ export default function Home() {
             <a
               href="https://twitter.com/its_ankitdas/"
               className="hover:text-black"
-              target="_blank"
+              // target="_blank"
             >
               <AiFillTwitterCircle />
             </a>
             <a
               href="https://github.com/meankitdas/"
               className="hover:text-black"
-              target="_blank"
+              // target="_blank"
             >
               <AiFillGithub />
             </a>
             <a
               href="https://www.linkedin.com/in/itsankitdas/"
               className="hover:text-black"
-              target="_blank"
+              // target="_blank"
             >
               <AiFillLinkedin />
             </a>
             <a
               href="https://www.instagram.com/its.ankitdas/"
               className="hover:text-black"
-              target="_blank"
+              // target="_blank"
             >
               <AiFillInstagram />
             </a>
@@ -140,17 +136,17 @@ export default function Home() {
                   This is a{" "}
                   <span className="font-bold text-teal-600">18 years</span> old
                   boy from Odisha, India. Pursuing{" "}
-                  <span className="font-bold text-teal-600">Btech</span> in{" "}
+                  <span className="font-bold text-teal-600">Btech</span> in {" "}
                   <span className=" font-bold text-teal-600">
                     Jain (deemed-to-be) University
                   </span>
-                  . I started my programming journay when I was in{" "}
-                  <span className=" font-bold text-teal-600">9th Class</span> .
-                  I have{" "}
+                  . I started my programming journay when I was in
+                  <span className=" font-bold text-teal-600">{" "}9th Class</span>.
+                  I have
                   <span className=" font-bold text-teal-600">
-                    4 years of experience
-                  </span>{" "}
-                  . I have a zeal for learning{" "}
+                    {" "}4 years of experience
+                  </span>
+                  . I have a zeal for learning {" "}
                   <span className=" font-bold text-teal-600">
                     new technologies
                   </span>
@@ -159,7 +155,7 @@ export default function Home() {
               </div>
             </div>
             <div className="py-10 my-10">
-              <Lottie options={defaultOptions} />
+              {/* <Lottie options={defaultOptions} /> */}
             </div>
           </div>
         </section>
