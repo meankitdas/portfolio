@@ -8,23 +8,8 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import profile from "../public/profile.png";
-// import { useState, useEffect } from "react";
-// import { motion } from "framer-motion";
-import Typewriter from "typewriter-effect";
-
-// import Lottie from "react-lottie";
-
-import animationData from "../public/about.json";
-
-// import {Parallax} from "react-scroll-parallax"
 
 export default function Home() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
-
   return (
     <div>
       <Head>
@@ -35,129 +20,52 @@ export default function Home() {
 
       <main className=" bg-white px-10">
         <section className=" min-h-screen">
-          {/* <Parallax speed={-10}> */}
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons">meankitdas</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
               </li>
-              <li className=" duration-500 hover:scale-110">
+              <li>
                 <a
                   href="#"
-                  className=" bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-md ml-5 font-code text-sm "
+                  className=" bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-md ml-5"
                 >
                   Resume
                 </a>
               </li>
             </ul>
           </nav>
-          {/* </Parallax> */}
-          <div className=" mx-auto mt-20 items-end relative w-80 h-80 ">
-            <Image src={profile} sizes />
-          </div>
           <div className="text-center p-10">
-            <h1 className="text-5xl py-2 text-teal-600 font-burtons" id="bio">
-              {/* Hi, I'm Ankit Das */}
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("Hi, I'm Ironman!")
-                    .callFunction(() => {
-                      console.log("String typed out!");
-                    })
-                    .pauseFor(500)
-                    .deleteAll()
-                    .callFunction(() => {
-                      console.log("All strings were deleted");
-                    })
-                    .typeString("Sorry! I'm not Ironman. . .")
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .callFunction(() => {
-                      console.log("All strings were deleted");
-                    })
-                    .typeString("I'm Ankit Das")
-                    .start();
-                }}
-              />
+            <h1 className="text-5xl py-2 text-teal-600 font-burtons">
+              Hi, I'm Ankit Das
             </h1>
-            {/* <p id="demo"></p> */}
-            <h3 className="text-2xl py-2 font-code ">A Full-Stack Developer</h3>
-            <p className=" text-md py-5 leading-8 text-gray-800 font-code ">
-              "Always code as if the guy who ends up maintaning your code will
-              be a violent psychopath who knows where you live."
+            <h3 className="text-2xl py-2">A Full-Stack Developer</h3>
+            <p className=" text-md py-5 leading-8 text-gray-800">
+              Always code as if the guy who ends up maintaning your code will be
+              a violent psychopath who knows where you live.{" "}
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-10 py-3 text-gray-600 ">
-            <a
-              href="https://twitter.com/its_ankitdas/"
-              className="hover:text-black"
-              // target="_blank"
-            >
+          <div className="text-5xl flex justify-center gap-10 py-3 text-gray-600">
+            <a href="https://twitter.com/its_ankitdas/" target="_blank">
               <AiFillTwitterCircle />
             </a>
-            <a
-              href="https://github.com/meankitdas/"
-              className="hover:text-black"
-              // target="_blank"
-            >
+            <a href="https://github.com/meankitdas/" target="_blank">
               <AiFillGithub />
             </a>
-            <a
-              href="https://www.linkedin.com/in/itsankitdas/"
-              className="hover:text-black"
-              // target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/itsankitdas/" target="_blank">
               <AiFillLinkedin />
             </a>
-            <a
-              href="https://www.instagram.com/its.ankitdas/"
-              className="hover:text-black"
-              // target="_blank"
-            >
+            <a href="https://www.instagram.com/its.ankitdas/" target="_blank">
               <AiFillInstagram />
             </a>
           </div>
-        </section>
-        <section className=" min-h-screen">
-          <div className="h-screen lg:flex ">
-            <div className=" flex flex-col justify-center  lg:w-2/5  ">
-              <div className="p-10">
-                <h3 className="text-2xl font-burtons  text-gray-800  ">
-                  let's Introduce myself
-                </h3>
-                <h4 className="text-4xl tracking-widest font-burtons font-bold text-gray-600 ">
-                  About me
-                </h4>
-              </div>
-              <div className="p-10 pt-0  ">
-                <p className="font-code ">
-                  This is a{" "}
-                  <span className="font-bold text-teal-600">18 years</span> old
-                  boy from Odisha, India. Pursuing{" "}
-                  <span className="font-bold text-teal-600">Btech</span> in {" "}
-                  <span className=" font-bold text-teal-600">
-                    Jain (deemed-to-be) University
-                  </span>
-                  . I started my programming journay when I was in
-                  <span className=" font-bold text-teal-600">{" "}9th Class</span>.
-                  I have
-                  <span className=" font-bold text-teal-600">
-                    {" "}4 years of experience
-                  </span>
-                  . I have a zeal for learning {" "}
-                  <span className=" font-bold text-teal-600">
-                    new technologies
-                  </span>
-                  .
-                </p>
-              </div>
-            </div>
-            <div className="py-10 my-10">
-              {/* <Lottie options={defaultOptions} /> */}
-            </div>
+          <div className=" mx-auto mt-20 items-end relative w-80 h-80">
+            <Image src={profile} sizes/>
           </div>
+        </section>
+        <section>
+          
         </section>
       </main>
     </div>
