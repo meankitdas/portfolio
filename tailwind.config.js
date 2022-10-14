@@ -8,8 +8,10 @@ module.exports = {
     extend: {
       fontFamily: {
         burtons: "burtons",
-      }
+        // code: "code",
+        code: ["Source Code Pro", "monospace"],
+      },
     },
   },
   plugins: [],
-}
+};
