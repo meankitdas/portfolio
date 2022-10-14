@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -7,9 +10,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        burtons: "burtons",
+        burtons: ["Silkscreen", "sans-serif"],
         // code: "code",
         code: ["Source Code Pro", "monospace"],
+      },
+      screens: {
+        xs: "480px",
+        ...defaultTheme.screens,
       },
     },
   },

@@ -8,13 +8,14 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import profile from "../public/profile.png";
-// import { useState, useEffect } from "react";
-// import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 import Lottie from "react-lottie";
 
 import animationData from "../public/about.json";
+import animationData2 from "../public/skills3.json";
 
 // import {Parallax} from "react-scroll-parallax"
 
@@ -23,6 +24,11 @@ export default function Home() {
     loop: true,
     autoplay: true,
     animationData: animationData,
+  };
+  const defaultOptions2 = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData2,
   };
 
   return (
@@ -39,7 +45,7 @@ export default function Home() {
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons">meankitdas</h1>
             <ul className="flex items-center">
-              <li>
+              <li className="invisible lg:visible">
                 <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
               </li>
               <li className=" duration-500 hover:scale-110">
@@ -53,11 +59,14 @@ export default function Home() {
             </ul>
           </nav>
           {/* </Parallax> */}
-          <div className=" mx-auto mt-20 items-end relative w-80 h-80 ">
-            <Image src={profile} sizes />
+          <div className="w-100 flex justify-center">
+            <Image src={profile} width={350} height={350} />
           </div>
           <div className="text-center p-10">
-            <h1 className="text-5xl py-2 text-teal-600 font-burtons" id="bio">
+            <h1
+              className="text-2xl lg:text-5xl  py-2 text-teal-600 font-burtons"
+              id="bio"
+            >
               {/* Hi, I'm Ankit Das */}
               <Typewriter
                 onInit={(typewriter) => {
@@ -71,7 +80,7 @@ export default function Home() {
                     .callFunction(() => {
                       console.log("All strings were deleted");
                     })
-                    .typeString("Sorry! I'm not Ironman. . .")
+                    .typeString("Sorry! I'm not Ironman.")
                     .pauseFor(1500)
                     .deleteAll()
                     .callFunction(() => {
@@ -83,8 +92,10 @@ export default function Home() {
               />
             </h1>
             {/* <p id="demo"></p> */}
-            <h3 className="text-2xl py-2 font-code ">A Full-Stack Developer</h3>
-            <p className=" text-md py-5 leading-8 text-gray-800 font-code ">
+            <h3 className="text-sm font-bold lg:font-normal lg:text-2xl py-2 font-code ">
+              A Full-Stack Developer
+            </h3>
+            <p className="text-sm lg:text-md py-5 leading-8 text-gray-800 font-code ">
               "Always code as if the guy who ends up maintaning your code will
               be a violent psychopath who knows where you live."
             </p>
@@ -120,33 +131,37 @@ export default function Home() {
             </a>
           </div>
         </section>
+
+        {/* Screen ----- 2 */}
+
         <section className=" min-h-screen">
           <div className="h-screen lg:flex ">
-            <div className=" flex flex-col justify-center  lg:w-2/5  ">
+            <div className=" flex flex-col justify-center lg:w-2/5  ">
               <div className="p-10">
-                <h3 className="text-2xl font-burtons  text-gray-800  ">
+                <h3 className="lg:text-2xl font-burtons  text-gray-800 ">
                   let's Introduce myself
                 </h3>
-                <h4 className="text-4xl tracking-widest font-burtons font-bold text-gray-600 ">
+                <h4 className="lg:text-4xl  tracking-widest font-burtons font-bold text-gray-600 md:text-3xl sm:text-2xl ">
                   About me
                 </h4>
               </div>
-              <div className="p-10 pt-0  ">
-                <p className="font-code ">
+              <div className="p-10 pt-0 text-sm lg:text-md ">
+                <p className="font-code">
                   This is a{" "}
                   <span className="font-bold text-teal-600">18 years</span> old
                   boy from Odisha, India. Pursuing{" "}
-                  <span className="font-bold text-teal-600">Btech</span> in {" "}
+                  <span className="font-bold text-teal-600">Btech</span> in{" "}
                   <span className=" font-bold text-teal-600">
                     Jain (deemed-to-be) University
                   </span>
                   . I started my programming journay when I was in
-                  <span className=" font-bold text-teal-600">{" "}9th Class</span>.
+                  <span className=" font-bold text-teal-600"> 9th Class</span>.
                   I have
                   <span className=" font-bold text-teal-600">
-                    {" "}4 years of experience
+                    {" "}
+                    4 years of experience
                   </span>
-                  . I have a zeal for learning {" "}
+                  . I have a zeal for learning{" "}
                   <span className=" font-bold text-teal-600">
                     new technologies
                   </span>
@@ -154,8 +169,120 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="py-10 my-10">
+            <div className="py-10 my-10 ">
               <Lottie options={defaultOptions} />
+            </div>
+          </div>
+        </section>
+
+        {/* Screen ----- 3 */}
+
+        <section className=" min-h-screen">
+          <div className="h-screen lg:flex ">
+            <div className="py-10 my-10 hi ">
+              <Lottie options={defaultOptions2} />
+            </div>
+            <div className="flex flex-col justify-center lg:w-2/5  ">
+              <div className="p-10">
+                <h3 className="lg:text-2xl font-burtons  text-gray-800 ">
+                  Something I know
+                </h3>
+                <h4 className="lg:text-4xl  tracking-widest font-burtons font-bold text-gray-600 md:text-3xl sm:text-2xl ">
+                  Skills
+                </h4>
+                <div className="p-10 pt-0 text-sm lg:text-md ">
+                  {/* <p className="font-code"></p> */}
+                </div>
+                <div >
+                  <p className="font-burtons py-2 text-sm lg:text-md"> Frontend</p>
+                  <div className="pb-3">
+                    <div className="w-full bg-gray-200 rounded-full">
+                      <motion.div
+                        className="bg-teal-600 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full w-0"
+                        animate={{
+                          width: "0%",
+                        }}
+                        whileInView={{
+                          width: "85%",
+                          transition: { duration: 2 },
+                        }}
+                        whileHover={{
+                          scale: 1.2,
+                          transition: { duration: 1 },
+                        }}
+                      >
+                        85%
+                      </motion.div>
+                    </div>
+                  </div>
+
+                  <p className="font-burtons py-2 text-sm lg:text-md "> Backend</p>
+                  <div className="pb-3">
+                  <div className="w-full bg-gray-200 rounded-full">
+                    <motion.div
+                      className="bg-teal-600 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full w-0"
+                      animate={{
+                        width: "0%",
+                      }}
+                      whileInView={{
+                        width: "95%",
+                        transition: { duration: 2 },
+                      }}
+                      whileHover={{
+                        scale: 1.2,
+                        transition: { duration: 1 },
+                      }}
+                    >
+                      95%
+                    </motion.div>
+                  </div>
+                  </div>
+
+                  <p className="font-burtons py-2 text-sm lg:text-md"> UI/UX</p>
+                  <div className="pb-3">
+                  <div className="w-full bg-gray-200 rounded-full">
+                    <motion.div
+                      className="bg-teal-600 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full w-0"
+                      animate={{
+                        width: "0%",
+                      }}
+                      whileInView={{
+                        width: "65%",
+                        transition: { duration: 2 },
+                      }}
+                      whileHover={{
+                        scale: 1.2,
+                        transition: { duration: 1 },
+                      }}
+                    >
+                      <p>65%</p>
+                    </motion.div>
+                  </div>
+                  </div>
+
+                  <p className="font-burtons py-2 text-sm lg:text-md"> Logic</p>
+                  <div className="pb-3">
+                  <div className="w-full bg-gray-200 rounded-full">
+                    <motion.div
+                      className="bg-teal-600 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full w-0"
+                      animate={{
+                        width: "0%",
+                      }}
+                      whileInView={{
+                        width: "80%",
+                        transition: { duration: 2 },
+                      }}
+                      whileHover={{
+                        scale: 1.2,
+                        transition: { duration: 1 },
+                      }}
+                    >
+                      80%
+                    </motion.div>
+                  </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
